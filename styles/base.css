@@ -1,0 +1,93 @@
+:root {
+  --color-bg: #070b14;
+  --color-bg-raised: #0b1220;
+  --color-surface: #101827;
+  --color-surface-strong: #151f31;
+  --color-line: #2a3850;
+  --color-line-soft: rgba(153, 166, 186, .16);
+  --color-text: #f4f7fb;
+  --color-text-soft: #c9d2df;
+  --color-muted: #98a6ba;
+  --color-subtle: #68768c;
+  --color-architecture: #31d7f4;
+  --color-architecture-deep: #1687d9;
+  --color-rl: #ad7cff;
+  --color-rl-deep: #7655d9;
+  --color-agency: #ffb454;
+  --color-agency-deep: #dc782e;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 56px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --slide-pad-x: 58px;
+  --slide-pad-top: 42px;
+  --slide-pad-bottom: 36px;
+
+  /* Backward-compatible semantic aliases for Phase 1 markup. */
+  --bg: var(--color-bg);
+  --surface: var(--color-surface);
+  --surface-2: var(--color-surface-strong);
+  --line: var(--color-line);
+  --text: var(--color-text);
+  --muted: var(--color-muted);
+  --arch: var(--color-architecture);
+  --arch-deep: var(--color-architecture-deep);
+  --rl: var(--color-rl);
+  --rl-deep: var(--color-rl-deep);
+  --agency: var(--color-agency);
+  --agency-deep: var(--color-agency-deep);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.slidev-layout {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+  padding: var(--slide-pad-top) var(--slide-pad-x) var(--slide-pad-bottom);
+  position: relative;
+}
+
+.slidev-layout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--slide-pad-x);
+  width: 54px;
+  height: 2px;
+  background: var(--color-line);
+}
+
+.slidev-layout::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(153, 166, 186, .08);
+  pointer-events: none;
+}
+
+.surface {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+.arch-text { color: var(--color-architecture); }
+.rl-text { color: var(--color-rl); }
+.agency-text { color: var(--color-agency); }
+.arch-border { border-color: rgba(49, 215, 244, .48) !important; }
+.rl-border { border-color: rgba(173, 124, 255, .48) !important; }
+.agency-border { border-color: rgba(255, 180, 84, .48) !important; }
+
+@media (max-width: 800px) {
+  .slidev-layout { padding: 34px 44px 30px; }
+}

@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Slidev / Vite cache
+.vite/
+.slidev/
+
+# Build output
+dist/
+
+# Research PDFs
+references/**/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
